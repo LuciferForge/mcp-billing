@@ -6,6 +6,7 @@ build-backend = "hatchling.build"
 name = "mcp-billing"
 version = "0.1.0"
 description = "Billing and monetization SDK for MCP servers. Add usage-based pricing to any MCP server in minutes."
+readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
 authors = [
@@ -24,8 +25,10 @@ classifiers = [
 ]
 dependencies = [
     "mcp>=1.0.0",
-    "stripe>=7.0.0",
 ]
+
+[project.optional-dependencies]
+stripe = ["stripe>=7.0.0"]
 
 [project.urls]
 Homepage = "https://github.com/LuciferForge/mcp-billing"
